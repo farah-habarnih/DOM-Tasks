@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #3: Changing images</title>
+    <style>
+        img{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            margin-top:3px;
+        }
+    </style>
+    
+</head>
+<body>
+
+<form>
+    <label for="country"></label>
+    <select name="country" id="country">
+    <option value="Select">Select</option>
+    <option value="Jordan">Jordan</option>
+    <option value="Norway">Norway</option>
+    <option value="Germany">Germany</option>
+    </select>
+  </form>
+
+<img src="https://advancepetproduct.com/wp-content/uploads/2019/04/no-image.png" alt="" id="Flag">
+
+    
+    <script>
+        let x;
+        document.getElementById("country").addEventListener("change", function() {
+            const countries=["Jordan","Norway","Germany"];
+        x = document.getElementById("country").value;
+        if (x === countries[0]) {
+            document.getElementById("Flag").src="https://flagsworld.org/img/cflags/jordan-flag.png";
+        }
+        else if (x === countries[1]) {
+            document.getElementById("Flag").src="https://st.depositphotos.com/1164721/1562/v/950/depositphotos_15620007-stock-illustration-norway-flag-vector-illustration.jpg";
+        }
+         else  {
+            document.getElementById("Flag").src="https://www.flags-and-anthems.com/media/flags/flagge-deutschland.gif"; 
+        }
+        });
+    
+        
+
+
+    </script>
+</body>
+</html>
